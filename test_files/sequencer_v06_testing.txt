@@ -1,0 +1,33 @@
+Oliver Dowie - 2020
+
+MATLAB MIDI SEQUENCER_v06 testing
+
+Version 6 implements silent notes for note values of 0, as well as conversion of note values into the C major scale.
+
+
+INPUT FOR SEQUENCE LENGTH
+
+same as version 5
+
+
+
+INPUT FOR NOTE VALUES
+
+same as version 5
+
+
+
+NOTE CONVERSION
+
+the 'notes' vector is input into the scaleRounder function and assigned to the global variable 'melody'.
+
+>> user input range for note values needs to be made narrower. currently the range of 0 to 100 produces very low and very high notes, which are not very user friendly!
+
+
+
+SILENT NOTES
+
+in the for loop that cycles through the notes values, the note values are checked for a value of 0.
+
+>> if a note is 0, the MIDI velocity for that note is set to zero, which plays a silent note.
+

@@ -1,0 +1,28 @@
+Oliver Dowie - 2020
+
+MATLAB MIDI SEQUENCER_v03 testing
+
+Version 3 introduces user input for note values.
+
+The vector for the note values is made a global variable so it can be accessed from within the startStop callback function.
+
+
+INPUT FOR SEQUENCE LENGTH
+
+this input asks the user for the number of notes they want to enter.
+there is no input checking yet.
+
+>> non-number inputs will produces errors
+>> numbers <= 0 will skip the note input stage and freeze the program requiring ctrl+c to break out of it.
+>> massive numbers will cause the program to ask the user for massive amounts of note values! This needs limiting!
+
+
+INPUT FOR NOTE VALUES
+
+this input asks the user for note values for the number of notes they wanted to enter.
+there is input checking, but it still produces errors!
+
+>> a number outside of the range 0 - 100 is checked and re-prompted
+
+>> code is meant to check for blank values and non-number values, but it produces ERRORs!
+>> error is due to array dimension mismatching for some reason
